@@ -8,6 +8,7 @@ import com.company.codecool.printing.PrintMenu;
 import com.company.codecool.product.Product;
 import com.company.codecool.vendingmechanism.PaymentService;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -37,26 +38,32 @@ public class Main {
 
 
         PrintMenu.printCoinMenu();
+        reader.readInput();
 
         switch (reader.getInput()){
             case 1:
-                paymentService.readCoinValue(wallet.giveCoin(new Coin(100)));
+                paymentService.readCoinValue(wallet.giveCoin(new Coin(10)));
                 System.out.println(paymentService.getCoinValue());
                 break;
             case 2:
-                paymentService.readProductPrice(new Product(150));
+                paymentService.readCoinValue(wallet.giveCoin(new Coin(20)));
+                System.out.println(paymentService.getCoinValue());
                 break;
             case 3:
-                paymentService.readProductPrice(new Product(100));
+                paymentService.readCoinValue(wallet.giveCoin(new Coin(50)));
+                System.out.println(paymentService.getCoinValue());
                 break;
             case 4:
-                paymentService.readProductPrice(new Product(80));
+                paymentService.readCoinValue(wallet.giveCoin(new Coin(100)));
+                System.out.println(paymentService.getCoinValue());
                 break;
             case 5:
-                paymentService.readProductPrice(new Product(803));
+                paymentService.readCoinValue(wallet.giveCoin(new Coin(200)));
+                System.out.println(paymentService.getCoinValue());
                 break;
             case 6:
-                paymentService.readProductPrice(new Product(123));
+                paymentService.readCoinValue(wallet.giveCoin(new Coin(500)));
+                System.out.println(paymentService.getCoinValue());
                 break;
         }
 

@@ -9,15 +9,10 @@ public class InputReader {
     public void readInput(){
         Scanner scanner = new Scanner(System.in);
         input = scanner.nextInt();
-        scanner.close();
     }
 
     public int getInput() {
         return input;
     }
 
-    public InputReader setInput(int input) {
-        this.input = input;
-        return this;
-    }
 }
