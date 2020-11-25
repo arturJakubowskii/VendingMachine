@@ -17,8 +17,8 @@ public class Main {
 //            wallet.giveCoin(coin = new Coin(200));
 //        }
 
-//        PrintMenu.printMainmenu();
-//        PrintMenu.printCoinmenu();
+//        PrintMenu.printMainMenu();
+//        PrintMenu.printCoinMenu();
 
     }
 }
