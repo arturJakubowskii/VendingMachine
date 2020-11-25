@@ -19,11 +19,13 @@ public class Wallet {
         this.fiveZl = fiveZl;
     }
 
-    private void checkCoinAmunt(int amount){
+    private boolean checkCoinAmount(int amount){
         if (amount == 0){
             System.out.println("Out of coins");
+            return false;
         }else{
             System.out.println("Coin is in the wallet");
+            return true;
         }
     }
 
@@ -32,33 +34,39 @@ public class Wallet {
 
         switch (coinValue){
             case 10:
-                checkCoinAmunt(tenGr);
-                tenGr--;
+                if (checkCoinAmount(tenGr)){
+                    tenGr--;
+                }
                 break;
 
             case 20:
-                checkCoinAmunt(twentyGr);
-                twentyGr--;
+                if (checkCoinAmount(twentyGr)){
+                    twentyGr--;
+                }
                 break;
 
             case 50:
-                checkCoinAmunt(fiftyGr);
-                fiftyGr--;
+                if (checkCoinAmount(fiftyGr)){
+                    fiftyGr--;
+                }
                 break;
 
             case 100:
-                checkCoinAmunt(oneZl);
-                oneZl--;
+                if (checkCoinAmount(oneZl)){
+                    oneZl--;
+                }
                 break;
 
             case 200:
-                checkCoinAmunt(twoZl);
-                twoZl--;
+                if (checkCoinAmount(twoZl)){
+                    twoZl--;
+                }
                 break;
 
             case 500:
-                checkCoinAmunt(fiveZl);
-                fiveZl--;
+                if (checkCoinAmount(fiveZl)){
+                    fiveZl--;
+                }
                 break;
         }
 
