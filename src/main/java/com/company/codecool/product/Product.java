@@ -2,13 +2,13 @@ package com.company.codecool.product;
 
 public class Product {
 
-    private int value;
+    private int price;
 
-    public Product(int value) {
-        this.value = value;
+    public Product(int price) {
+        this.price = price;
     }
 
-    public int getValue() {
-        return value;
+    public int getPrice() {
+        return price;
     }
 }

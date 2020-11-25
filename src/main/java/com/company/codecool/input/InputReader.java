@@ -4,21 +4,15 @@ import java.util.Scanner;
 
 public class InputReader {
 
-    /*
- TODO
-  main class for control the VendingMachine e.g
-  uses InputReader to read input (user choice for product and coins)
-  and then process it to PaymentService
-  */
+    private int input = 0;
 
+    public void readInput(){
+        Scanner scanner = new Scanner(System.in);
+        input = scanner.nextInt();
+        scanner.close();
+    }
 
-   public static int readInput(){
-       Scanner scanner = new Scanner(System.in);
-       int input = scanner.nextInt();
-       scanner.close();
-       return input;
-   }
-
-
-
+    public int getInput() {
+        return input;
+    }
 }

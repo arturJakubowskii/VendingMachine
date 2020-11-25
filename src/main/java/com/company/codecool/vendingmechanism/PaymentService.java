@@ -12,14 +12,21 @@ public class PaymentService {
      */
 
 
-    public static int summedCoinsValue = 0;
+    //public static int summedCoinsValue = 0;
+    private int productPrice = 0;
     Coin coin;
     Product product;
     Wallet wallet = new Wallet(2,3,2,2,2,1);
 
-    public void sumCoinsValue(Coin coin){
-        summedCoinsValue = coin.getValue();
+//    public void sumCoinsValue(Coin coin){
+//        summedCoinsValue = coin.getValue();
+//    }
+
+    public void readProductPrice(Product product){
+        productPrice = product.getPrice();
     }
 
-
+    public int getProductPrice() {
+        return productPrice;
+    }
 }

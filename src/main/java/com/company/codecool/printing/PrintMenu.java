@@ -6,7 +6,7 @@ public class PrintMenu {
         System.out.println(
                 "Food vending machine" + "\n" + "\n"
                         + "Our products:  "
-                        + "1.Sandwich: 3zl  2.Cola: 1.50zl  3.Candy: bar 1zl  4.Water: 80gr" + "\n" + "\n"
+                        + "1.Sandwich: 3zl | 2.Cola: 1.50zl | 3.Candy: bar 1zl | 4.Water: 80gr" + "\n" + "\n"
                         + "Please choose your product: " + "\n"
         );
     }
