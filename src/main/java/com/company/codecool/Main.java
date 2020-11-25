@@ -3,6 +3,7 @@ package com.company.codecool;
 
 import com.company.codecool.currency.Coin;
 import com.company.codecool.currency.Wallet;
+import com.company.codecool.input.InputReader;
 import com.company.codecool.printing.PrintMenu;
 
 public class Main {
@@ -16,7 +17,8 @@ public class Main {
 //            wallet.giveCoin(coin = new Coin(200));
 //        }
 
-        PrintMenu.printMainmenu();
-        PrintMenu.printCoinmenu();
+//        PrintMenu.printMainmenu();
+//        PrintMenu.printCoinmenu();
+
     }
 }
