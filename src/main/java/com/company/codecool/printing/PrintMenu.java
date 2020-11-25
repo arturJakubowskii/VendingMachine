@@ -12,7 +12,7 @@ public class PrintMenu {
     }
 
     public static void printCoinMenu(){
-        System.out.println("Your Coins, enter option for coin input:" + "\n"
+        System.out.println("Your Coins, enter option for coin input:" + "\n" +"\n"
                 + "1. 10gr" +"\n"
                 + "2. 20gr" +"\n"
                 + "3. 50gr" +"\n"

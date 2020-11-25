@@ -15,4 +15,9 @@ public class InputReader {
     public int getInput() {
         return input;
     }
+
+    public InputReader setInput(int input) {
+        this.input = input;
+        return this;
+    }
 }

@@ -15,6 +15,7 @@ public class Main {
 
         InputReader reader = new InputReader();
         PaymentService paymentService = new PaymentService();
+        Wallet wallet = new Wallet(3,3,2,2,2,1);
 
         PrintMenu.printMainMenu();
         reader.readInput();
@@ -34,10 +35,30 @@ public class Main {
                 break;
         }
 
-        System.out.println(paymentService.getProductPrice());
-        //PrintMenu.printCoinMenu();
 
+        PrintMenu.printCoinMenu();
 
+        switch (reader.getInput()){
+            case 1:
+                paymentService.readCoinValue(wallet.giveCoin(new Coin(100)));
+                System.out.println(paymentService.getCoinValue());
+                break;
+            case 2:
+                paymentService.readProductPrice(new Product(150));
+                break;
+            case 3:
+                paymentService.readProductPrice(new Product(100));
+                break;
+            case 4:
+                paymentService.readProductPrice(new Product(80));
+                break;
+            case 5:
+                paymentService.readProductPrice(new Product(803));
+                break;
+            case 6:
+                paymentService.readProductPrice(new Product(123));
+                break;
+        }
 
     }
 }

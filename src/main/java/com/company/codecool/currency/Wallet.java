@@ -29,47 +29,60 @@ public class Wallet {
         }
     }
 
-    public void giveCoin(Coin coin){
+    private int returnCoinValue(Coin coin, int amount){
+        if (amount > 0){
+            return coin.getValue();
+        }
+        return 0;
+    }
+
+    public int giveCoin(Coin coin){
         int coinValue = coin.getValue();
 
         switch (coinValue){
             case 10:
                 if (checkCoinAmount(tenGr)){
                     tenGr--;
+                    return returnCoinValue(coin, tenGr);
                 }
                 break;
 
             case 20:
                 if (checkCoinAmount(twentyGr)){
                     twentyGr--;
+                    return returnCoinValue(coin, twentyGr);
                 }
                 break;
 
             case 50:
                 if (checkCoinAmount(fiftyGr)){
                     fiftyGr--;
+                    return returnCoinValue(coin,fiftyGr);
                 }
                 break;
 
             case 100:
                 if (checkCoinAmount(oneZl)){
                     oneZl--;
+                    return returnCoinValue(coin,oneZl);
                 }
                 break;
 
             case 200:
                 if (checkCoinAmount(twoZl)){
                     twoZl--;
+                    return returnCoinValue(coin,twoZl);
                 }
                 break;
 
             case 500:
                 if (checkCoinAmount(fiveZl)){
                     fiveZl--;
+                    return returnCoinValue(coin,fiveZl);
                 }
                 break;
+
         }
-
-
+        return 0;
     }
 }

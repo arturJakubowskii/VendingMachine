@@ -14,6 +14,7 @@ public class PaymentService {
 
     //public static int summedCoinsValue = 0;
     private int productPrice = 0;
+    private int coinValue = 0;
     Coin coin;
     Product product;
     Wallet wallet = new Wallet(2,3,2,2,2,1);
@@ -26,7 +27,15 @@ public class PaymentService {
         productPrice = product.getPrice();
     }
 
+    public void readCoinValue(int value){
+        coinValue = value;
+    }
+
     public int getProductPrice() {
         return productPrice;
+    }
+
+    public int getCoinValue(){
+        return coinValue;
     }
 }
