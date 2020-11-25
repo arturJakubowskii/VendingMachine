@@ -19,49 +19,70 @@ public class Wallet {
         this.fiveZl = fiveZl;
     }
 
-    private void checkCoinAmunt(int amount){
+    private boolean checkCoinAmount(int amount){
         if (amount == 0){
             System.out.println("Out of coins");
+            return false;
         }else{
             System.out.println("Coin is in the wallet");
+            return true;
         }
     }
 
-    public void giveCoin(Coin coin){
+    private int returnCoinValue(Coin coin, int amount){
+        if (amount > 0){
+            return coin.getValue();
+        }
+        return 0;
+    }
+
+    public int giveCoin(Coin coin){
         int coinValue = coin.getValue();
 
         switch (coinValue){
             case 10:
-                checkCoinAmunt(tenGr);
-                tenGr--;
+                if (checkCoinAmount(tenGr)){
+                    tenGr--;
+                    return returnCoinValue(coin, tenGr);
+                }
                 break;
 
             case 20:
-                checkCoinAmunt(twentyGr);
-                twentyGr--;
+                if (checkCoinAmount(twentyGr)){
+                    twentyGr--;
+                    return returnCoinValue(coin, twentyGr);
+                }
                 break;
 
             case 50:
-                checkCoinAmunt(fiftyGr);
-                fiftyGr--;
+                if (checkCoinAmount(fiftyGr)){
+                    fiftyGr--;
+                    return returnCoinValue(coin,fiftyGr);
+                }
                 break;
 
             case 100:
-                checkCoinAmunt(oneZl);
-                oneZl--;
+                if (checkCoinAmount(oneZl)){
+                    oneZl--;
+                    return returnCoinValue(coin,oneZl);
+                }
                 break;
 
             case 200:
-                checkCoinAmunt(twoZl);
-                twoZl--;
+                if (checkCoinAmount(twoZl)){
+                    twoZl--;
+                    return returnCoinValue(coin,twoZl);
+                }
                 break;
 
             case 500:
-                checkCoinAmunt(fiveZl);
-                fiveZl--;
+                if (checkCoinAmount(fiveZl)){
+                    fiveZl--;
+                    return returnCoinValue(coin,fiveZl);
+                }
                 break;
+
         }
-
-
+        return 0;
     }
 }

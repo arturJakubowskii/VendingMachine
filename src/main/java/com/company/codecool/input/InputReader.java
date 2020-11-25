@@ -4,12 +4,15 @@ import java.util.Scanner;
 
 public class InputReader {
 
+    private int input = 0;
 
-   public static int readInput(){
-       Scanner scanner = new Scanner(System.in);
-       int input = scanner.nextInt();
-       scanner.close();
-       return input;
-   }
+    public void readInput(){
+        Scanner scanner = new Scanner(System.in);
+        input = scanner.nextInt();
+    }
+
+    public int getInput() {
+        return input;
+    }
 
 }
