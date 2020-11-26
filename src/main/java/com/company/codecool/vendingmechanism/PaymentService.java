@@ -5,6 +5,7 @@ import com.company.codecool.currency.Wallet;
 import com.company.codecool.product.Product;
 
 public class PaymentService {
+
     /*
     TODO
      method that count Coin object value and assign it somewhere for ChangeService.
@@ -17,7 +18,7 @@ public class PaymentService {
     private int coinValue = 0;
     Coin coin;
     Product product;
-    Wallet wallet = new Wallet(2,3,2,2,2,1);
+    //Wallet wallet = new Wallet(2,3,2,2,2,1);
 
 //    public void sumCoinsValue(Coin coin){
 //        summedCoinsValue = coin.getValue();
@@ -28,7 +29,7 @@ public class PaymentService {
     }
 
     public void readCoinValue(int value){
-        coinValue = value;
+        coinValue += value;
     }
 
     public int getProductPrice() {
@@ -38,4 +39,5 @@ public class PaymentService {
     public int getCoinValue(){
         return coinValue;
     }
+
 }
