@@ -2,7 +2,7 @@ package com.company.codecool.printing;
 
 public class PrintMenu {
 
-    public static void printMainMenu(){
+    public void printMainMenu(){
         System.out.println(
                 "Food vending machine" + "\n" + "\n"
                         + "Our products:  "
@@ -11,7 +11,7 @@ public class PrintMenu {
         );
     }
 
-    public static void printCoinMenu(){
+    public void printCoinMenu(){
         System.out.println("Your Coins, enter option for coin input:" + "\n" +"\n"
                 + "1. 10gr" +"\n"
                 + "2. 20gr" +"\n"

@@ -9,7 +9,7 @@ public class ChangeService {
     private int coinValue;
 
     private ArrayList<Integer> coinValueArray = new ArrayList<>();
-    ArrayList<Integer> returnedArray = new ArrayList<>();
+    private ArrayList<Integer> changeArray = new ArrayList<>();
 
     public ChangeService(int productPrice, int coinValue) {
         this.productPrice = productPrice;
@@ -39,7 +39,6 @@ public class ChangeService {
     }
 
     private int returnCoinValueChange(){
-        //System.out.println(coinValue);
         int coinValueChange = productPrice - coinValue;
         return Math.abs(coinValueChange);
     }
@@ -49,22 +48,24 @@ public class ChangeService {
         int change = returnCoinValueChange();
         int y;
 
-
         if (coinValueArray.contains(change)){
-            returnedArray.add(change);
+            changeArray.add(change);
         }else {
+
             while(change != 0){
                 for (int x : coinValueArray){
 
                     if (change - x >= 0){
                         y = x;
                         change -= x;
-                        returnedArray.add(y);
+                        changeArray.add(y);
                     }
                 }
             }
         }
     }
 
-
+    public ArrayList<Integer> getChangeArray() {
+        return changeArray;
+    }
 }
