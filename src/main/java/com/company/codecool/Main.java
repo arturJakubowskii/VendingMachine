@@ -25,7 +25,7 @@ public class Main {
 
         switch (reader.getInput()){
             case 1:
-                paymentService.readProductPrice(new Product(300));
+                paymentService.readProductPrice(new Product(40));
                 break;
             case 2:
                 paymentService.readProductPrice(new Product(150));

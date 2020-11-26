@@ -33,6 +33,7 @@ public class Wallet {
         if (amount > 0){
             return coin.getValue();
         }
+        System.out.println("dupa");
         return 0;
     }
 
@@ -84,5 +85,33 @@ public class Wallet {
 
         }
         return 0;
+    }
+
+    public void takeChange(int change){
+        switch (change){
+            case 10:
+                tenGr++;
+                break;
+
+            case 20:
+                twentyGr++;
+                break;
+
+            case 50:
+                fiftyGr++;
+                break;
+
+            case 100:
+                oneZl++;
+                break;
+
+            case 200:
+                twoZl++;
+                break;
+
+            case 500:
+                fiveZl++;
+                break;
+        }
     }
 }
