@@ -1,5 +1,7 @@
 package com.company.codecool.currency;
 
+import java.util.ArrayList;
+
 public class Wallet {
 
     private int tenGr;
@@ -33,6 +35,7 @@ public class Wallet {
         if (amount > 0){
             return coin.getValue();
         }
+        System.out.println("dupa");
         return 0;
     }
 
@@ -84,5 +87,64 @@ public class Wallet {
 
         }
         return 0;
+    }
+
+    public void takeChange(ArrayList<Integer> coinValues){
+
+        for (int value : coinValues){
+
+            System.out.println(value);
+
+            switch (value){
+                case 10:
+                    tenGr++;
+                    break;
+
+                case 20:
+                    twentyGr++;
+                    break;
+
+                case 50:
+                    fiftyGr++;
+                    break;
+
+                case 100:
+                    oneZl++;
+                    break;
+
+                case 200:
+                    twoZl++;
+                    break;
+
+                case 500:
+                    fiveZl++;
+                    break;
+            }
+        }
+
+    }
+
+    public int getOneZl() {
+        return oneZl;
+    }
+
+    public int getTenGr() {
+        return tenGr;
+    }
+
+    public int getTwentyGr() {
+        return twentyGr;
+    }
+
+    public int getFiftyGr() {
+        return fiftyGr;
+    }
+
+    public int getTwoZl() {
+        return twoZl;
+    }
+
+    public int getFiveZl() {
+        return fiveZl;
     }
 }
