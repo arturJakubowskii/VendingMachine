@@ -1,5 +1,9 @@
 package com.company.codecool.vendingmechanism;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
 public class ChangeService {
 
     /*
@@ -11,22 +15,40 @@ public class ChangeService {
     private int productPrice;
     private int coinValue;
 
-    private int coinValueChange = 0;
+    private Set<Integer> coinValueSet = new HashSet<>();
 
     public ChangeService(int productPrice, int coinValue) {
         this.productPrice = productPrice;
         this.coinValue = coinValue;
     }
 
+    private void insertValuesToSet() {
+        coinValueSet.add(10);
+        coinValueSet.add(20);
+        coinValueSet.add(50);
+        coinValueSet.add(100);
+        coinValueSet.add(200);
+        coinValueSet.add(500);
+    }
+
     public void changeController(){
         if(coinValue >= productPrice){
             System.out.println("Payment has been successful");
-        }else{                                               // I should add more to this method for example
-            System.out.println("Payment not accepted");     // returning change
+            changeMechanism();
+        }else{
+            System.out.println("Payment not accepted");
         }
     }
 
     private int returnCoinValueChange(){
-        return coinValueChange = productPrice - coinValue;
+        int coinValueChange = productPrice - coinValue;
+        return Math.abs(coinValueChange);
     }
+
+    private void changeMechanism(){
+        insertValuesToSet();
+        int change = returnCoinValueChange();
+
+    }
+
 }
