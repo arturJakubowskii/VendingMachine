@@ -35,7 +35,6 @@ public class Wallet {
         if (amount > 0){
             return coin.getValue();
         }
-        System.out.println("dupa");
         return 0;
     }
 

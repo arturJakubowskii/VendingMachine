@@ -9,6 +9,5 @@ public class Main {
         AppService appService = new AppService();
         appService.run();
 
-
     }
 }
