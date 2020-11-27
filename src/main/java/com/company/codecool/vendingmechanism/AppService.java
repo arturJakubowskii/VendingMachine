@@ -6,7 +6,7 @@ import com.company.codecool.input.InputReader;
 import com.company.codecool.printing.PrintMenu;
 import com.company.codecool.product.Product;
 
-public class MenuService {
+public class AppService {
 
     InputReader reader = new InputReader();
     PrintMenu printMenu = new PrintMenu();
